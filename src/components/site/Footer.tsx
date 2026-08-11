@@ -1,22 +1,27 @@
 import { Link } from "@tanstack/react-router";
-import { ADDRESS, businesses } from "@/data/business";
+import { businesses } from "@/data/business";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="mt-20 border-t border-border bg-secondary/60">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3">
         <div>
-          <h2 className="font-heading text-xl text-foreground">दत्ता कुटुंब व्यवसाय समूह</h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{ADDRESS}</p>
-          <p className="mt-3 text-sm text-muted-foreground">वेळ: दररोज सकाळी ९ ते रात्री ८</p>
+          <h2 className="font-heading text-xl text-foreground">{t.brand}</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t.address}</p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            {t.footer.hoursLabel}: {t.hours}
+          </p>
         </div>
 
         <div>
-          <h3 className="font-heading text-lg text-foreground">आमचे व्यवसाय</h3>
+          <h3 className="font-heading text-lg text-foreground">{t.footer.businessesHeading}</h3>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             {businesses.map((b) => (
               <li key={b.slug}>
-                {b.name} —{" "}
+                {t.businesses[b.slug]?.name ?? b.name} —{" "}
                 <a href={`tel:${b.phone}`} className="text-foreground hover:underline">
                   {b.phone}
                 </a>
@@ -26,38 +31,38 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading text-lg text-foreground">दुवे</h3>
+          <h3 className="font-heading text-lg text-foreground">{t.footer.linksHeading}</h3>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li>
               <Link to="/about" className="hover:text-foreground">
-                आमच्याविषयी
+                {t.nav.about}
               </Link>
             </li>
             <li>
               <Link to="/services" className="hover:text-foreground">
-                सेवा व उत्पादने
+                {t.nav.services}
               </Link>
             </li>
             <li>
               <Link to="/gallery" className="hover:text-foreground">
-                फोटो गॅलरी
+                {t.nav.gallery}
               </Link>
             </li>
             <li>
               <Link to="/faq" className="hover:text-foreground">
-                प्रश्नोत्तरे
+                {t.nav.faq}
               </Link>
             </li>
             <li>
               <Link to="/contact" className="hover:text-foreground">
-                संपर्क करा
+                {t.nav.contact}
               </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border/70 px-4 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} दत्ता कुटुंब व्यवसाय समूह, जारावंडी. सर्व हक्क राखीव.
+        © {new Date().getFullYear()} {t.brand}, {t.brandSub}. {t.footer.rights}
       </div>
     </footer>
   );
