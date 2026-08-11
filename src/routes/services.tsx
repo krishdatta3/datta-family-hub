@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { businesses } from "@/data/business";
 import { BusinessSection } from "@/components/site/BusinessSection";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const title = "सेवा व उत्पादने | CSC, बांगड्या, चप्पल, टेलरिंग – जारावंडी";
 const description =
@@ -23,13 +24,11 @@ export const Route = createFileRoute("/services")({
 });
 
 function Services() {
+  const { t } = useI18n();
   return (
     <div className="section">
-      <h1 className="text-3xl text-foreground sm:text-4xl">सेवा व उत्पादने</h1>
-      <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-        खालील प्रत्येक विभागात संबंधित मालकांचा थेट संपर्क क्रमांक दिला आहे — कॉल करा किंवा
-        WhatsApp वर विचारणा करा.
-      </p>
+      <h1 className="text-3xl text-foreground sm:text-4xl">{t.services.h1}</h1>
+      <p className="mt-3 max-w-2xl text-sm text-muted-foreground">{t.services.intro}</p>
       <div className="mt-8 grid gap-8">
         {businesses.map((b, i) => (
           <BusinessSection key={b.slug} b={b} reverse={i % 2 === 1} />

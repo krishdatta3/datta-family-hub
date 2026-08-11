@@ -1,18 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-
-const nav = [
-  { to: "/", label: "मुख्यपृष्ठ" },
-  { to: "/about", label: "आमच्याविषयी" },
-  { to: "/services", label: "सेवा व उत्पादने" },
-  { to: "/gallery", label: "गॅलरी" },
-  { to: "/faq", label: "प्रश्नोत्तरे" },
-  { to: "/contact", label: "संपर्क" },
-] as const;
+import { useI18n } from "@/i18n/LanguageProvider";
+import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { t } = useI18n();
+
+  const nav = [
+    { to: "/", label: t.nav.home },
+    { to: "/about", label: t.nav.about },
+    { to: "/services", label: t.nav.services },
+    { to: "/gallery", label: t.nav.gallery },
+    { to: "/faq", label: t.nav.faq },
+    { to: "/contact", label: t.nav.contact },
+  ] as const;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur">
@@ -23,9 +26,9 @@ export function Header() {
           </span>
           <span className="leading-tight">
             <span className="block font-heading text-base text-foreground sm:text-lg">
-              दत्ता कुटुंब व्यवसाय समूह
+              {t.brand}
             </span>
-            <span className="block text-xs text-muted-foreground">जारावंडी, ता. एटापल्ली</span>
+            <span className="block text-xs text-muted-foreground">{t.brandSub}</span>
           </span>
         </Link>
 
@@ -41,21 +44,25 @@ export function Header() {
               {n.label}
             </Link>
           ))}
+          <LanguageSwitcher className="ml-2" />
           <a
             href="tel:9404884450"
             className="ml-2 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
-            <Phone className="h-4 w-4" /> कॉल करा
+            <Phone className="h-4 w-4" /> {t.common.call}
           </a>
         </nav>
 
-        <button
-          onClick={() => setOpen((v) => !v)}
-          aria-label="मेनू"
-          className="grid h-10 w-10 place-items-center rounded-lg border border-border lg:hidden"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Menu"
+            className="grid h-10 w-10 place-items-center rounded-lg border border-border"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (

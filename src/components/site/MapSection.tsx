@@ -1,13 +1,16 @@
-import { MAPS_QUERY, ADDRESS } from "@/data/business";
+import { MAPS_QUERY } from "@/data/business";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export function MapSection() {
+  const { t } = useI18n();
+
   return (
     <section className="section">
-      <h2 className="text-2xl text-foreground sm:text-3xl">आमचे ठिकाण</h2>
-      <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{ADDRESS}</p>
+      <h2 className="text-2xl text-foreground sm:text-3xl">{t.map.heading}</h2>
+      <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{t.address}</p>
       <div className="mt-6 overflow-hidden rounded-3xl border border-border shadow-card">
         <iframe
-          title="दत्ता कुटुंब व्यवसाय समूह – नकाशा"
+          title={t.map.iframeTitle}
           src={`https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`}
           loading="lazy"
           className="h-[360px] w-full border-0"
@@ -18,9 +21,9 @@ export function MapSection() {
         href={`https://www.google.com/maps/search/?api=1&query=${MAPS_QUERY}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+        className="mt-4 inline-block text-sm text-primary hover:underline"
       >
-        दिशा मिळवा
+        {t.map.openInMaps}
       </a>
     </section>
   );

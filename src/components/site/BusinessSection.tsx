@@ -1,5 +1,6 @@
 import type { Business } from "@/data/business";
 import { Phone, MessageCircle } from "lucide-react";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const accentMap = {
   csc: { bar: "bg-csc", chip: "bg-csc-soft text-csc", btn: "bg-csc text-primary-foreground" },
@@ -18,6 +19,14 @@ const accentMap = {
 
 export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean }) {
   const a = accentMap[b.accent];
+  const { t } = useI18n();
+  const c = t.businesses[b.slug] ?? {
+    name: b.name,
+    tagline: b.tagline,
+    description: b.description,
+    items: b.items,
+  };
+
   return (
     <article
       id={b.slug}
@@ -27,7 +36,7 @@ export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean
       <div className={`grid gap-0 md:grid-cols-2 ${reverse ? "md:[direction:rtl]" : ""}`}>
         <img
           src={b.image}
-          alt={b.name}
+          alt={c.name}
           loading="lazy"
           width={1024}
           height={768}
@@ -35,12 +44,12 @@ export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean
         />
         <div className="p-6 sm:p-8 md:[direction:ltr]">
           <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${a.chip}`}>
-            {b.tagline}
+            {c.tagline}
           </span>
-          <h3 className="mt-3 text-2xl text-foreground">{b.name}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{b.description}</p>
+          <h3 className="mt-3 text-2xl text-foreground">{c.name}</h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
           <ul className="mt-4 grid gap-2 text-sm text-foreground">
-            {b.items.map((i) => (
+            {c.items.map((i) => (
               <li key={i} className="flex gap-2">
                 <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${a.bar}`} />
                 {i}
@@ -48,7 +57,7 @@ export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean
             ))}
           </ul>
           <p className="mt-5 text-sm text-muted-foreground">
-            प्रोप्रायटर: <span className="font-medium text-foreground">{b.owner}</span>
+            {t.common.proprietor}: <span className="font-medium text-foreground">{b.owner}</span>
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <a
@@ -63,7 +72,7 @@ export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground press transition-colors hover:bg-secondary"
             >
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+              <MessageCircle className="h-4 w-4" /> {t.common.whatsapp}
             </a>
           </div>
         </div>

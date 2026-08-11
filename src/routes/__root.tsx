@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 
 
 function NotFoundComponent() {
@@ -132,13 +133,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Header />
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-      <FloatingActions />
+      <LanguageProvider>
+        <Header />
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+        <FloatingActions />
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

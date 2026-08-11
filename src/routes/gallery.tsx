@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { businesses } from "@/data/business";
 import { Reveal } from "@/components/site/Reveal";
 import heroImg from "@/assets/hero.jpg";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const title = "फोटो गॅलरी | दत्ता कुटुंब व्यवसाय समूह, जारावंडी";
 const description =
@@ -24,17 +25,16 @@ export const Route = createFileRoute("/gallery")({
 });
 
 function Gallery() {
+  const { t } = useI18n();
   const images = [
-    { src: heroImg, alt: "जारावंडी येथील आमचा परिसर" },
-    ...businesses.map((b) => ({ src: b.image, alt: b.name })),
+    { src: heroImg, alt: t.gallery.areaAlt },
+    ...businesses.map((b) => ({ src: b.image, alt: t.businesses[b.slug]?.name ?? b.name })),
   ];
 
   return (
     <div className="section">
-      <h1 className="text-3xl text-foreground sm:text-4xl">फोटो गॅलरी</h1>
-      <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-        आमच्या दुकानांची आणि सेवांची झलक. नवीन माल आल्यावर फोटो अपडेट केले जातात.
-      </p>
+      <h1 className="text-3xl text-foreground sm:text-4xl">{t.gallery.h1}</h1>
+      <p className="mt-3 max-w-2xl text-sm text-muted-foreground">{t.gallery.intro}</p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {images.map((img, i) => (
           <Reveal key={img.alt} delay={i * 70}>
