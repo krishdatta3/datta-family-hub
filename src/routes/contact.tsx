@@ -25,7 +25,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function Contact() {
-  const [form, setForm] = useState({ name: "", phone: "", subject: businesses[0].name, message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", subject: businesses[0]!.name, message: "" });
 
   const waLink = `https://wa.me/919404884450?text=${encodeURIComponent(
     `नमस्कार,\nनाव: ${form.name}\nमोबाईल: ${form.phone}\nविषय: ${form.subject}\nसंदेश: ${form.message}`,
