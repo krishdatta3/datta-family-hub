@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { faqs } from "@/data/business";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const title = "वारंवार विचारले जाणारे प्रश्न | दत्ता कुटुंब व्यवसाय समूह";
 const description =
@@ -36,18 +37,14 @@ export const Route = createFileRoute("/faq")({
 });
 
 function Faq() {
+  const { t } = useI18n();
   return (
     <div className="section">
-      <h1 className="text-3xl text-foreground sm:text-4xl">वारंवार विचारले जाणारे प्रश्न</h1>
+      <h1 className="text-3xl text-foreground sm:text-4xl">{t.faq.h1}</h1>
       <div className="mt-8 grid gap-3">
-        {faqs.map((f) => (
-          <details
-            key={f.q}
-            className="group rounded-2xl border border-border bg-card p-5 shadow-soft"
-          >
-            <summary className="cursor-pointer list-none font-medium text-foreground">
-              {f.q}
-            </summary>
+        {t.faqs.map((f) => (
+          <details key={f.q} className="group rounded-2xl border border-border bg-card p-5 shadow-soft">
+            <summary className="cursor-pointer list-none font-medium text-foreground">{f.q}</summary>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
           </details>
         ))}
