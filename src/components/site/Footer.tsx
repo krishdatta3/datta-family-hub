@@ -16,7 +16,10 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             {businesses.map((b) => (
               <li key={b.slug}>
-                {b.name} — <a href={`tel:${b.phone}`} className="text-foreground hover:underline">{b.phone}</a>
+                {b.name} —{" "}
+                <a href={`tel:${b.phone}`} className="text-foreground hover:underline">
+                  {b.phone}
+                </a>
               </li>
             ))}
           </ul>
@@ -25,11 +28,31 @@ export function Footer() {
         <div>
           <h3 className="font-heading text-lg text-foreground">दुवे</h3>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/about" className="hover:text-foreground">आमच्याविषयी</Link></li>
-            <li><Link to="/services" className="hover:text-foreground">सेवा व उत्पादने</Link></li>
-            <li><Link to="/gallery" className="hover:text-foreground">फोटो गॅलरी</Link></li>
-            <li><Link to="/faq" className="hover:text-foreground">प्रश्नोत्तरे</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground">संपर्क करा</Link></li>
+            <li>
+              <Link to="/about" className="hover:text-foreground">
+                आमच्याविषयी
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-foreground">
+                सेवा व उत्पादने
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" className="hover:text-foreground">
+                फोटो गॅलरी
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:text-foreground">
+                प्रश्नोत्तरे
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-foreground">
+                संपर्क करा
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
