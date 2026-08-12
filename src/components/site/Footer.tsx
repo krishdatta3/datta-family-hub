@@ -61,9 +61,13 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-border/70 px-4 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {t.brand}, {t.brandSub}. {t.footer.rights}
+      <div className="flex flex-col items-center gap-3 border-t border-border/70 px-4 py-5 text-center text-xs text-muted-foreground">
+        <VisitorCounter />
+        <p>
+          © {new Date().getFullYear()} {t.brand}, {t.brandSub}. {t.footer.rights}
+        </p>
       </div>
+
     </footer>
   );
 }
