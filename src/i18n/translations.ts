@@ -80,7 +80,7 @@ export type Content = {
     waMessage: string;
   };
   map: { heading: string; iframeTitle: string; openInMaps: string };
-  footer: { businessesHeading: string; linksHeading: string; hoursLabel: string; rights: string };
+  footer: { businessesHeading: string; linksHeading: string; hoursLabel: string; rights: string; visitorsLabel: string };
   businesses: Record<string, BusinessCopy>;
   testimonials: { name: string; place: string; text: string }[];
   faqs: { q: string; a: string }[];
@@ -210,6 +210,7 @@ const mr: Content = {
     linksHeading: "दुवे",
     hoursLabel: "वेळ",
     rights: "सर्व हक्क राखीव.",
+    visitorsLabel: "एकूण भेटी:",
   },
   businesses: {
     "datta-services": {
@@ -426,6 +427,7 @@ const hi: Content = {
     linksHeading: "लिंक",
     hoursLabel: "समय",
     rights: "सर्वाधिकार सुरक्षित।",
+    visitorsLabel: "कुल विज़िट:",
   },
   businesses: {
     "datta-services": {
@@ -642,6 +644,7 @@ const en: Content = {
     linksHeading: "Links",
     hoursLabel: "Hours",
     rights: "All rights reserved.",
+    visitorsLabel: "Total visits:",
   },
   businesses: {
     "datta-services": {
