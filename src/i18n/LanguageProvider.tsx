@@ -2,6 +2,30 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 import { translations, type Lang, type Content } from "./translations";
 
 const KEY = "site-lang";
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
+
+function isLang(v: string | null | undefined): v is Lang {
+  return !!v && v in translations;
+}
+
+function readCookie(name: string): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]!) : null;
+}
+
+function writeCookie(name: string, value: string) {
+  if (typeof document === "undefined") return;
+  document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${COOKIE_MAX_AGE}; samesite=lax`;
+}
+
+function syncUrl(lang: Lang) {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  if (url.searchParams.get("lang") === lang) return;
+  url.searchParams.set("lang", lang);
+  window.history.replaceState(window.history.state, "", url.toString());
+}
 
 const Ctx = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: Content }>({
   lang: "mr",
@@ -12,9 +36,26 @@ const Ctx = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: Content }
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("mr");
 
+  // Resolve initial language: URL ?lang= > cookie > localStorage
   useEffect(() => {
-    const saved = localStorage.getItem(KEY) as Lang | null;
-    if (saved && saved in translations) setLangState(saved);
+    const fromUrl = new URLSearchParams(window.location.search).get("lang");
+    const fromCookie = readCookie(KEY);
+    let fromStorage: string | null = null;
+    try {
+      fromStorage = localStorage.getItem(KEY);
+    } catch {
+      /* ignore */
+    }
+
+    const resolved = [fromUrl, fromCookie, fromStorage].find(isLang) ?? "mr";
+    setLangState(resolved);
+    writeCookie(KEY, resolved);
+    try {
+      localStorage.setItem(KEY, resolved);
+    } catch {
+      /* ignore */
+    }
+    syncUrl(resolved);
   }, []);
 
   useEffect(() => {
@@ -26,6 +67,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       lang,
       setLang: (l: Lang) => {
         setLangState(l);
+        writeCookie(KEY, l);
+        syncUrl(l);
         try {
           localStorage.setItem(KEY, l);
         } catch {
