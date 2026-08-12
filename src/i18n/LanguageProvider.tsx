@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import { translations, type Lang, type Content } from "./translations";
 
 const KEY = "site-lang";
@@ -57,6 +58,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
     syncUrl(resolved);
   }, []);
+
+  // Keep ?lang= present after client-side navigations
+  const pathname = useRouterState({ select: (st) => st.location.pathname });
+  useEffect(() => {
+    syncUrl(lang);
+  }, [pathname, lang]);
 
   useEffect(() => {
     document.documentElement.lang = translations[lang].htmlLang;
