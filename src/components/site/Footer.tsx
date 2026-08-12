@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { businesses } from "@/data/business";
 import { useI18n } from "@/i18n/LanguageProvider";
+import { VisitorCounter } from "@/components/site/VisitorCounter";
+
 
 export function Footer() {
   const { t } = useI18n();
