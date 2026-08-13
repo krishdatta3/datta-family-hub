@@ -7,7 +7,7 @@ import { Reveal } from "@/components/site/Reveal";
 import heroImg from "@/assets/hero.jpg";
 import { Phone, MessageCircle, ShieldCheck, Clock, MapPin, Star } from "lucide-react";
 
-const title = "दत्ता कुटुंब व्यवसाय समूह | CSC सेवा, बांगडी भंडार, शू शॉप, टेलरिंग – जारावंडी";
+const title = "दत्ता कुटुंब व्यवसाय समूह, जारावंडी | CSC व टेलरिंग";
 const description =
   "जारावंडी, ता. एटापल्ली येथे CSC ऑनलाइन सेवा, बांगड्या व लेडीज अ‍ॅक्सेसरीज, स्वस्त व दर्जेदार चप्पल-जोडे आणि टेलरिंग-विणकाम सेवा — एकाच कुटुंबाच्या विश्वासाने.";
 
@@ -24,10 +24,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://datta-family-hub.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://datta-family-hub.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
