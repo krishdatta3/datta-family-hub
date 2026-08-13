@@ -123,7 +123,7 @@ const mr: Content = {
     keywords:
       "CSC केंद्र जारावंडी, ऑनलाइन फॉर्म एटापल्ली, बांगडी दुकान गडचिरोली, चप्पल दुकान जारावंडी, टेलरिंग शॉप एटापल्ली, दत्ता सर्व्हिसेस",
     badge: "जारावंडी, ता. एटापल्ली, जि. गडचिरोली",
-    h1: "एका छताखाली चार विश्वासू व्यवसाय — आपल्या गावासाठी, आपल्याच माणसांकडून",
+    h1: "जारावंडी येथे CSC सेवा केंद्र, बांगडी भंडार, पादत्राणे व टेलरिंग — दत्ता कुटुंब व्यवसाय समूह",
     intro:
       "डिजिटल व शासकीय सेवा, सणासुदीच्या बांगड्या व अ‍ॅक्सेसरीज, परवडणारी पादत्राणे आणि मापाप्रमाणे शिवणकाम — दत्ता कुटुंबाच्या आपुलकीच्या सेवेसह.",
     heroAlt: "जारावंडी येथील दत्ता कुटुंबाची दुकाने",
@@ -340,7 +340,7 @@ const hi: Content = {
     keywords:
       "CSC केंद्र जारावंडी, ऑनलाइन फॉर्म एटापल्ली, चूड़ी दुकान गढ़चिरौली, जूते की दुकान जारावंडी, टेलरिंग शॉप एटापल्ली, दत्ता सर्विसेज",
     badge: "जारावंडी, ता. एटापल्ली, जि. गढ़चिरौली",
-    h1: "एक ही छत के नीचे चार भरोसेमंद व्यवसाय — अपने गाँव के लिए, अपनों के द्वारा",
+    h1: "जारावंडी में CSC सेवा केंद्र, चूड़ी भंडार, जूते-चप्पल और टेलरिंग — दत्ता परिवार व्यवसाय समूह",
     intro:
       "डिजिटल व सरकारी सेवाएँ, त्योहारों की चूड़ियाँ व एक्सेसरीज़, किफ़ायती फुटवेयर और नाप के अनुसार सिलाई — दत्ता परिवार की आत्मीय सेवा के साथ।",
     heroAlt: "जारावंडी स्थित दत्ता परिवार की दुकानें",
@@ -557,7 +557,7 @@ const en: Content = {
     keywords:
       "CSC centre Jarawandi, online forms Etapalli, bangle shop Gadchiroli, shoe shop Jarawandi, tailoring shop Etapalli, Datta Services",
     badge: "Jarawandi, Tal. Etapalli, Dist. Gadchiroli",
-    h1: "Four trusted businesses under one roof — for our village, by our own people",
+    h1: "CSC Centre, Bangle Store, Footwear & Tailoring in Jarawandi — Datta Family Businesses",
     intro:
       "Digital and government services, festive bangles and accessories, affordable footwear and made-to-measure tailoring — with the warm service of the Datta family.",
     heroAlt: "The Datta family shops in Jarawandi",

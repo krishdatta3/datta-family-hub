@@ -16,10 +16,10 @@ export const Route = createFileRoute("/gallery")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/gallery" },
+      { property: "og:url", content: "https://datta-family-hub.lovable.app/gallery" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/gallery" }],
+    links: [{ rel: "canonical", href: "https://datta-family-hub.lovable.app/gallery" }],
   }),
   component: Gallery,
 });

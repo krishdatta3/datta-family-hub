@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://datta-family-hub.lovable.app/sitemap.xml

@@ -46,7 +46,7 @@ export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean
           <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${a.chip}`}>
             {c.tagline}
           </span>
-          <h3 className="mt-3 text-2xl text-foreground">{c.name}</h3>
+          <h2 className="mt-3 text-2xl text-foreground">{c.name}</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
           <ul className="mt-4 grid gap-2 text-sm text-foreground">
             {c.items.map((i) => (
