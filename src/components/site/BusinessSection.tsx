@@ -1,6 +1,8 @@
 import type { Business } from "@/data/business";
 import { Phone, MessageCircle } from "lucide-react";
 import { useI18n } from "@/i18n/LanguageProvider";
+import { OpenNowBadge } from "@/components/site/OpenNowBadge";
+
 
 const accentMap = {
   csc: { bar: "bg-csc", chip: "bg-csc-soft text-csc", btn: "bg-csc text-primary-foreground" },
