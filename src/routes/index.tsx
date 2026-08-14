@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { businesses } from "@/data/business";
+import { toOpeningHoursSpecification, toSchemaOpeningHours } from "@/lib/hours";
 import { useI18n } from "@/i18n/LanguageProvider";
 import { BusinessSection } from "@/components/site/BusinessSection";
 import { MapSection } from "@/components/site/MapSection";
@@ -45,7 +46,24 @@ export const Route = createFileRoute("/")({
             postalCode: "442606",
             addressCountry: "IN",
           },
-          openingHours: "Mo-Su 09:00-20:00",
+          openingHours: ["Mo-Sa 09:00-20:00", "Su 09:00-14:00"],
+          department: businesses.map((b) => ({
+            "@type": "LocalBusiness",
+            "@id": `https://datta-family-hub.lovable.app/services#${b.slug}`,
+            name: b.name,
+            description: b.description,
+            telephone: `+91${b.phone}`,
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "दत्ता निवास, भापडा मेन रोड, जारावंडी",
+              addressLocality: "एटापल्ली",
+              addressRegion: "महाराष्ट्र",
+              postalCode: "442606",
+              addressCountry: "IN",
+            },
+            openingHours: toSchemaOpeningHours(b.hours),
+            openingHoursSpecification: toOpeningHoursSpecification(b.hours),
+          })),
         }),
       },
     ],

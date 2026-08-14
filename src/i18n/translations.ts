@@ -28,6 +28,10 @@ export type Content = {
     viewServices: string;
     proprietor: string;
     language: string;
+    openNow: string;
+    closedNow: string;
+    todayHours: string;
+    closedToday: string;
   };
   home: {
     title: string;
@@ -98,7 +102,7 @@ const mr: Content = {
   brand: "दत्ता कुटुंब व्यवसाय समूह",
   brandSub: "जारावंडी, ता. एटापल्ली",
   address: mrAddress,
-  hours: "दररोज सकाळी ९:०० ते रात्री ८:००",
+  hours: "दुकानानुसार वेळ — सोम-शनि ९:०० ते २०:००",
   nav: {
     home: "मुख्यपृष्ठ",
     about: "आमच्याविषयी",
@@ -115,6 +119,10 @@ const mr: Content = {
     viewServices: "सेवा पहा",
     proprietor: "प्रोप्रायटर",
     language: "भाषा",
+    openNow: "आत्ता उघडे",
+    closedNow: "सध्या बंद",
+    todayHours: "आजची वेळ",
+    closedToday: "आज बंद",
   },
   home: {
     title: "दत्ता कुटुंब व्यवसाय समूह | CSC सेवा, बांगडी भंडार, शू शॉप, टेलरिंग – जारावंडी",
@@ -315,7 +323,7 @@ const hi: Content = {
   brand: "दत्ता परिवार व्यवसाय समूह",
   brandSub: "जारावंडी, ता. एटापल्ली",
   address: hiAddress,
-  hours: "प्रतिदिन सुबह ९:०० से रात ८:०० तक",
+  hours: "दुकान अनुसार समय — सोम-शनि ९:०० से २०:०० तक",
   nav: {
     home: "मुख्य पृष्ठ",
     about: "हमारे बारे में",
@@ -332,6 +340,10 @@ const hi: Content = {
     viewServices: "सेवाएँ देखें",
     proprietor: "प्रोपराइटर",
     language: "भाषा",
+    openNow: "अभी खुला",
+    closedNow: "अभी बंद",
+    todayHours: "आज का समय",
+    closedToday: "आज बंद",
   },
   home: {
     title: "दत्ता परिवार व्यवसाय समूह | CSC सेवा, चूड़ी भंडार, शू शॉप, टेलरिंग – जारावंडी",
@@ -532,7 +544,7 @@ const en: Content = {
   brand: "Datta Family Business Group",
   brandSub: "Jarawandi, Tal. Etapalli",
   address: enAddress,
-  hours: "Open daily, 9:00 AM to 8:00 PM",
+  hours: "Hours vary by shop — Mon-Sat 9:00 to 20:00",
   nav: {
     home: "Home",
     about: "About Us",
@@ -549,6 +561,10 @@ const en: Content = {
     viewServices: "View Services",
     proprietor: "Proprietor",
     language: "Language",
+    openNow: "Open now",
+    closedNow: "Closed now",
+    todayHours: "Today",
+    closedToday: "Closed today",
   },
   home: {
     title: "Datta Family Business Group | CSC Services, Bangles, Shoes, Tailoring – Jarawandi",

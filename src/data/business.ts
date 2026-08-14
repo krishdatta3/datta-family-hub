@@ -2,6 +2,7 @@ import csc from "@/assets/csc.jpg";
 import bangles from "@/assets/bangles.jpg";
 import shoes from "@/assets/shoes.jpg";
 import tailoring from "@/assets/tailoring.jpg";
+import type { OpeningHours } from "@/lib/hours";
 
 export const ADDRESS =
   "दत्ता निवास, गव्हर्नमेंट रेस्ट हाऊसच्या समोर, भापडा मेन रोडच्या कडेला, जारावंडी, पो. जारावंडी, ता. एटापल्ली, जि. गडचिरोली (महा.) – ४४२६०६";
@@ -18,6 +19,7 @@ export type Business = {
   owner: string;
   phone: string;
   items: string[];
+  hours: OpeningHours[];
   image: string;
   accent: "csc" | "bangdi" | "shoe" | "tailor";
 };
@@ -38,6 +40,10 @@ export const businesses: Business[] = [
       "आधार, पॅन, विमा व इतर सेवा",
       "प्रिंट, स्कॅन व झेरॉक्स",
     ],
+    hours: [
+      { days: [1, 2, 3, 4, 5, 6], open: "09:00", close: "20:00" },
+      { days: [0], open: "09:00", close: "14:00" },
+    ],
     image: csc,
     accent: "csc",
   },
@@ -56,6 +62,7 @@ export const businesses: Business[] = [
       "फॅशन ज्वेलरी व सणासुदीच्या वस्तू",
       "गिफ्ट व शृंगार साहित्य",
     ],
+    hours: [{ days: [0, 1, 2, 3, 4, 5, 6], open: "10:00", close: "20:00" }],
     image: bangles,
     accent: "bangdi",
   },
@@ -74,6 +81,7 @@ export const businesses: Business[] = [
       "पावसाळी व कामाची पादत्राणे",
       "लहान मुलांचे फूटवेअर",
     ],
+    hours: [{ days: [0, 1, 2, 3, 4, 5, 6], open: "09:00", close: "20:00" }],
     image: shoes,
     accent: "shoe",
   },
@@ -92,6 +100,7 @@ export const businesses: Business[] = [
       "कपड्यांचे अल्टरेशन व दुरुस्ती",
       "फॉल-पिको व फिनिशिंग कामे",
     ],
+    hours: [{ days: [1, 2, 3, 4, 5, 6], open: "09:00", close: "19:00" }],
     image: tailoring,
     accent: "tailor",
   },
@@ -123,7 +132,7 @@ export const testimonials = [
 export const faqs = [
   {
     q: "दुकान कोणत्या वेळेत उघडे असते?",
-    a: "आमची चारही दुकाने सोमवार ते रविवार सकाळी ९:०० ते रात्री ८:०० या वेळेत सुरू असतात. सणासुदीला वेळ वाढवली जाते.",
+    a: "दत्ता सर्व्हिसेस: सोम-शनि ९:००-२०:००, रविवार ९:००-१४:००. साराचं बांगडी भंडार: रोज १०:००-२०:००. दत्ता अँड सन्स शू शॉप: रोज ९:००-२०:००. सारा टेलरिंग शॉप: सोम-शनि ९:००-१९:०० (रविवार बंद). सणासुदीला वेळ वाढवली जाते.",
   },
   {
     q: "CSC केंद्रात कोणकोणत्या सेवा मिळतात?",
