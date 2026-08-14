@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ADDRESS, businesses } from "@/data/business";
+import { businesses } from "@/data/business";
 import { toOpeningHoursSpecification, toSchemaOpeningHours } from "@/lib/hours";
 import { useI18n } from "@/i18n/LanguageProvider";
 import { BusinessSection } from "@/components/site/BusinessSection";
