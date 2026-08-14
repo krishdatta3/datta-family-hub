@@ -47,7 +47,11 @@ export function BusinessSection({ b, reverse }: { b: Business; reverse?: boolean
             {c.tagline}
           </span>
           <h2 className="mt-3 text-2xl text-foreground">{c.name}</h2>
+          <div className="mt-3">
+            <OpenNowBadge hours={b.hours} />
+          </div>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
+
           <ul className="mt-4 grid gap-2 text-sm text-foreground">
             {c.items.map((i) => (
               <li key={i} className="flex gap-2">
