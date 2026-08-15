@@ -148,6 +148,7 @@ const mr: Content = {
     ctaHeading: "आजच भेट द्या किंवा फोन करा",
     ctaCall: "9404884450 वर कॉल करा",
     ctaForm: "संपर्क फॉर्म भरा",
+    independenceDay: "स्वातंत्र्य दिनाच्या हार्दिक शुभेच्छा! 🇮🇳",
   },
   about: {
     title: "आमच्याविषयी | दत्ता कुटुंब व्यवसाय समूह, जारावंडी",
@@ -369,6 +370,7 @@ const hi: Content = {
     ctaHeading: "आज ही आएँ या फोन करें",
     ctaCall: "9404884450 पर कॉल करें",
     ctaForm: "संपर्क फॉर्म भरें",
+    independenceDay: "स्वतंत्रता दिवस की हार्दिक शुभकामनाएँ! 🇮🇳",
   },
   about: {
     title: "हमारे बारे में | दत्ता परिवार व्यवसाय समूह, जारावंडी",
@@ -590,6 +592,7 @@ const en: Content = {
     ctaHeading: "Visit us today or give us a call",
     ctaCall: "Call 9404884450",
     ctaForm: "Fill the contact form",
+    independenceDay: "Happy Independence Day! 🇮🇳",
   },
   about: {
     title: "About Us | Datta Family Business Group, Jarawandi",
