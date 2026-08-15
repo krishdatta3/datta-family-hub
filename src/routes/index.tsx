@@ -87,6 +87,11 @@ function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/92 to-background/40" />
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
+          <div className="mb-5 animate-fade-up rounded-xl border border-orange-200/60 bg-gradient-to-r from-orange-500/20 via-white/60 to-emerald-600/20 p-3 text-center shadow-sm dark:from-orange-500/15 dark:via-white/10 dark:to-emerald-600/15">
+            <p className="text-sm font-semibold tracking-wide text-foreground">
+              {t.home.independenceDay}
+            </p>
+          </div>
           <span className="inline-flex animate-fade-up items-center gap-2 rounded-full bg-accent/30 px-4 py-1.5 text-xs font-medium text-accent-foreground">
             <MapPin className="h-3.5 w-3.5" /> {t.home.badge}
           </span>
