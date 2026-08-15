@@ -48,6 +48,7 @@ export type Content = {
     ctaHeading: string;
     ctaCall: string;
     ctaForm: string;
+    independenceDay: string;
   };
   about: {
     title: string;
