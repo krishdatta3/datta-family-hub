@@ -1,14 +1,134 @@
-# Welcome to your Lovable project
+# Dattas' Digital Hub
+
+Enhanced Prompt
+
+तुम्ही एक अनुभवी वेब डिझायनर, UI/UX तज्ज्ञ आणि लहान व्यवसायांसाठी वेबसाइट डेव्हलपर म्हणून काम करा.
+
+माझ्यासाठी एक आधुनिक, मोबाईल-फ्रेंडली, मराठी भाषेतील आणि SEO-अनुकूल वेबसाइटची संपूर्ण रचना तयार करा. वेबसाइटमध्ये माझ्या खालील चार व्यवसायांची माहिती आकर्षक पद्धतीने दाखवली जावी:
+
+Datta Services (CSC सेवा केंद्र)
+
+सेवा: पैसे जमा/पाठवणे, ऑनलाइन फॉर्म भरणे, सरकारी व खाजगी ऑनलाइन सेवा, इतर डिजिटल सेवा.
+
+प्रोप्रायटर: श्री. कृष्णा दत्ता
+
+संपर्क: 9404884450
+
+साराचं बांगडी भंडार
+
+उत्पादने: बांगड्या, कानातील टॉप्स, लेडीज अॅक्सेसरीज, फॅशन वस्तू आणि इतर सामान.
+
+प्रोप्रायटर: सौ. ईश्वरी कृष्णा दत्ता
+
+संपर्क: 7587708689
+
+Datta and Sons Shoe Shop
+
+उत्पादने: कमी किमतीतील दर्जेदार चप्पल, जोडे आणि पादत्राणे.
+
+प्रोप्रायटर: श्री. रंजन दत्ता
+
+संपर्क: 9403236119
+
+Sara Tailoring Shop
+
+सेवा: शिवणकाम, विणकाम, लोकर विणकाम, कपड्यांचे बदल व इतर टेलरिंग सेवा.
+
+प्रोप्रायटर: श्रीमती पौर्णिमा रंजन दत्ता
+
+संपर्क: 9403236119
+
+वेबसाइटमध्ये खालील विभाग समाविष्ट करा:
+
+आकर्षक Home Page
+
+About Us
+
+Services & Products
+
+प्रत्येक व्यवसायासाठी स्वतंत्र विभाग
+
+फोटो गॅलरी
+
+ग्राहक अभिप्राय (Testimonials)
+
+Google Maps Location विभाग
+
+WhatsApp Contact Button
+
+Contact Us Form
+
+Call Now बटण
+
+FAQ विभाग
+
+उदाहरण शैली: स्थानिक व्यवसायांसाठी असलेल्या आधुनिक, स्वच्छ आणि विश्वासार्ह वेबसाइटप्रमाणे डिझाइन करा. रंगसंगती व्यावसायिक पण आकर्षक असावी. CSC सेवांसाठी निळा रंग, लेडीज अॅक्सेसरीजसाठी गुलाबी/सोनेरी टोन, शू शॉपसाठी गडद आधुनिक टोन आणि टेलरिंग विभागासाठी एलिगंट रंग वापरा.
+
+साइटची रचना तयार करताना:
+
+प्रत्येक पेजचे कंटेंट मराठीत लिहा.
+
+Hero Section साठी आकर्षक हेडलाईन व उपशीर्षक तयार करा.
+
+प्रत्येक व्यवसायासाठी मार्केटिंग-फ्रेंडली वर्णन लिहा.
+
+SEO Keywords सुचवा.
+
+Meta Title व Meta Description द्या.
+
+वेबसाइट नेव्हिगेशन मेनू तयार करा.
+
+वेबसाइटचा पूर्ण sitemap तयार करा.
+
+आवश्यक असल्यास HTML/CSS आधारित नमुना लेआउटही द्या.
+
+आउटपुट स्वरूप:
+
+वेबसाइटचे संपूर्ण साइटमॅप
+
+पेज-वाइज कंटेंट
+
+डिझाइन व रंगसंगती सूचना
+
+SEO योजना
+
+संपर्क विभागाचा नमुना
+
+HTML/CSS लेआउटचा नमुना
+
+अतिरिक्त मार्गदर्शन:
+
+मोबाईल, टॅब्लेट आणि डेस्कटॉप सर्व उपकरणांवर उत्तम दिसेल अशी रचना सुचवा.
+
+स्थानिक ग्राहकांना आकर्षित करणारी भाषा वापरा.
+
+संपर्क क्रमांक स्पष्टपणे अनेक ठिकाणी दर्शवा.
+
+WhatsApp आणि कॉल बटण नेहमी दृश्यमान राहतील याची सूचना द्या.
+
+विश्वासार्हता वाढवण्यासाठी ग्राहक पुनरावलोकने, सेवा वैशिष्ट्ये आणि व्यवसाय मालकांची माहिती समाविष्ट करा.
+
+Tailoring Notes
+
+मी असे गृहित धरले आहे की वेबसाइटची प्रमुख भाषा मराठी असेल.
+
+वेबसाइटमध्ये चार वेगवेगळे व्यवसाय एकाच ब्रँड किंवा कुटुंबीय व्यवसाय समूहाखाली दाखवले जातील.
+
+पुढे भरता येण्यासारखे तपशील:
+
+दुकानाचा पूर्ण पत्ता : दत्ता निवास , गवर्नमेंट रेस्ट हाऊसच्या समोरासमोर, भापडा मेन रोडच्या कडेला, जारावंडी पो. जारावंडी ता. एटपल्ली जिल्हा. गडचिरोली (महा) पिन कोड - 442606
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://datta-family-hub.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9ba02244-16f3-4353-8182-d3beec3307c5).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +140,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
