@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://yplrckxvxncixjxhjbzv.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "dattas-digital-hub",
+      "version": "0.1.0",
+      "title": "Dattas' Digital Hub"
+    },
+    "tools": [
+      {
+        "name": "list_businesses",
+        "title": "List businesses",
+        "description": "List all four Datta family businesses in Jarawandi with proprietor, phone, services, opening hours and live open/closed status.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_business",
+        "title": "Get business details",
+        "description": "Get full details for one business by slug: datta-services, sara-bangdi-bhandar, datta-and-sons-shoe-shop or sara-tailoring-shop.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Business slug."
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_faqs",
+        "title": "Get FAQs and testimonials",
+        "description": "Return the site's frequently asked questions and customer testimonials (Marathi).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_visitor_count",
+        "title": "Get visitor count",
+        "description": "Read the total number of visits recorded for the website.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
